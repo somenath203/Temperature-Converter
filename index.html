@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Jaascript Temperature Converter</title>
+  </head>
+  <body>
+    <div class="heading">
+      <h2>Temperature Converter</h2>
+    </div>
+    <form id="tempCalculator" onsubmit="calculateTemp(); return false">
+      <!--return false is equivalent to e.preventDefault()-->
+      <label for="temp" id="designLabelText">Enter the Temperature</label>
+      <br />
+      <input type="number" name="temp" id="temp" />
+
+      <select name="temp_diff" id="temp_diff">
+        <option value="cel">Celcius</option>
+        <option value="fah">Farhenheit</option>
+      </select>
+      <br />
+      <input type="submit" value="Convert">
+      <br />
+      <span id="resultContainer"></span>
+      <br />
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html>
